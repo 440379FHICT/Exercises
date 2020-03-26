@@ -51,8 +51,10 @@ func main() {
 	time.Sleep(duration)
 	if length < 12 || resultLowerCase < 2 || resultNumbers < 2 || resultUpperCase < 2 || resultSpecialChar < 1 {
 		fmt.Println("Your password is weak!")
+	} else if length > 20 {
+		fmt.Println("Are you sure you can remember this one?")
 	} else {
-		fmt.Println("Good enough I suppose")
+		fmt.Println("Good enough")
 	}
-
+	time.Sleep(duration)
 }
